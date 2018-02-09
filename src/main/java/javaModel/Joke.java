@@ -1,29 +1,18 @@
 package javaModel;
 
-import java.util.List;
-
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
-@JacksonXmlRootElement(localName="Metadata")
 public class Joke {
 
     @JacksonXmlProperty(isAttribute = true, namespace = "")
     private Integer id;
-    private String joke;
+    protected String joke;
 
-
-    /**
-     * No args constructor for use in serialization
-     */
     public Joke() {
     }
 
-    /**
-     * @param id
-     * @param joke
-     */
+
     public Joke(Integer id, String joke) {
         super();
         this.id = id;

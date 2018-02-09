@@ -3,17 +3,19 @@ package managers;
 import javaModel.Constants;
 import javaModel.Joke;
 import javaModel.JokeResponse;
+import jdk.nashorn.internal.scripts.JO;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class RetrofitJokeManager implements JokeManager {
+
+    List<Joke> jokesRetro;
+
 
     public List<Joke> fetchJokes(int count) throws IOException {
 
@@ -24,9 +26,11 @@ public class RetrofitJokeManager implements JokeManager {
         JokeService jokeService = retrofit.create(JokeService.class);
         Response<JokeResponse> response = jokeService.randomJokes(count).execute();
         jokes = response.body().getValue();
+        jokesRetro = jokes;
         return jokes;
 
     }
+
 
 
     public void printJokes(List<Joke> jokes) {
