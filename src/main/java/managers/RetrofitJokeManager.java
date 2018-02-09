@@ -9,7 +9,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class RetrofitJokeManager implements JokeManager {
 
@@ -31,7 +33,7 @@ public class RetrofitJokeManager implements JokeManager {
         int size = jokes.size();
         System.out.println("You have requested " + size + " jokes about Chuck Norris.");
         for (int i = 0; i < size; i++) {
-            System.out.println("Joke number: " + (i + 1));
+            System.out.println("Joke number: " + jokes.get(i).getId());
             System.out.println(jokes.get(i).getJoke());
         }
     }

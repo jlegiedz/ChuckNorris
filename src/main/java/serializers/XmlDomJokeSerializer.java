@@ -39,7 +39,10 @@ public class XmlDomJokeSerializer implements JokeSerializer {
         //id element
         for (int i = 0; i < numberOfJokes; i++) {
             Attr attr = document.createAttribute("id");
-            attr.setValue(String.valueOf(i));
+
+            String id = document.createTextNode(Integer.toString(jokes.get(i).getId())).getWholeText();
+            attr.setValue(id);
+
             //add joke content
             Element jokeElement = document.createElement("joke");
             rootElement.appendChild(jokeElement);
@@ -62,8 +65,6 @@ public class XmlDomJokeSerializer implements JokeSerializer {
             } catch (TransformerException e) {
                 e.printStackTrace();
             }
-
-            System.out.println("File saved!");
 
         }
 
