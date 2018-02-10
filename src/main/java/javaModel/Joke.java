@@ -1,12 +1,18 @@
 package javaModel;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import org.apache.commons.lang.builder.ToStringBuilder;
 
+@JacksonXmlRootElement(localName = "joke")
 public class Joke {
 
-    @JacksonXmlProperty(isAttribute = true, namespace = "")
+    @JacksonXmlProperty(isAttribute = true)
     private Integer id;
+    @JacksonXmlText()
     protected String joke;
 
     public Joke() {
