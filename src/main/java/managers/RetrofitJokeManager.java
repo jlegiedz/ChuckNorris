@@ -3,7 +3,6 @@ package managers;
 import javaModel.Constants;
 import javaModel.Joke;
 import javaModel.JokeResponse;
-import jdk.nashorn.internal.scripts.JO;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -30,7 +29,6 @@ public class RetrofitJokeManager implements JokeManager {
         return jokes;
 
     }
-
 
 
     public void printJokes(List<Joke> jokes) {

@@ -1,6 +1,5 @@
 package managers;
 
-import javaModel.Joke;
 import javaModel.JokeResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;

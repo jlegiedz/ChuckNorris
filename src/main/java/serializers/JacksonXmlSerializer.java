@@ -3,21 +3,17 @@ package serializers;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import javaModel.Joke;
 
 import java.io.File;
 import java.io.IOException;
 
+import java.io.OutputStream;
 import java.util.List;
 
 public class JacksonXmlSerializer implements JokeSerializer {
 
     public void serialize(List<Joke> jokes) {
-
-//        XmlFactory factory = new XmlFactory(
-//                new InputFactoryImpl(), new OutputFactoryImpl());
 
         JokeCollection jc = new JokeCollection();
         jc.jokeList = jokes;
@@ -34,9 +30,10 @@ public class JacksonXmlSerializer implements JokeSerializer {
         }
 
     }
+
     private class JokeCollection {
         @JacksonXmlElementWrapper(useWrapping = false)
-        @JacksonXmlProperty( localName = "joke" )
+        @JacksonXmlProperty(localName = "joke")
         public List<Joke> jokeList;
     }
 }
