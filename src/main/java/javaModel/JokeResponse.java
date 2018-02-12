@@ -13,7 +13,7 @@ public class JokeResponse {
     private String type;
     @SerializedName("value")
     @Expose
-    private List<Joke> value = null;
+    private List<Joke> value;
 
     /**
      * No args constructor for use in serialization

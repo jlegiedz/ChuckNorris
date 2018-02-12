@@ -5,17 +5,17 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 import com.thoughtworks.xstream.annotations.XStreamConverter;
 import com.thoughtworks.xstream.converters.extended.ToAttributedValueConverter;
-import org.apache.commons.lang.builder.ToStringBuilder;
+
+import java.util.List;
 
 
 @XStreamConverter(value = ToAttributedValueConverter.class, strings = {"joke"})
-@JacksonXmlRootElement(localName = "joke")
 public class Joke {
 
     @JacksonXmlProperty(isAttribute = true)
     private Integer id;
     @JacksonXmlText()
-    protected String joke;
+    private String joke;
 
     public Joke() {
     }
@@ -46,9 +46,9 @@ public class Joke {
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this)
-                .append("id", id)
-                .toString();
+        return "Joke{" +
+                "id=" + id +
+                ", joke='" + joke + '\'' +
+                '}';
     }
-
 }

@@ -58,7 +58,7 @@ public class XmlDomJokeSerializer implements JokeSerializer {
                 e.printStackTrace();
             }
             DOMSource source = new DOMSource(document);
-            StreamResult result = new StreamResult(new File("jokesDOM.xml"));
+            StreamResult result = new StreamResult(new File("DOM_file.xml"));
 
             try {
                 transformer.transform(source, result);

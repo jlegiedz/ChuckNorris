@@ -18,7 +18,6 @@ public class Main {
 
         JokeManager jokeManager = new RetrofitJokeManager();
         List<Joke> jokes = jokeManager.fetchJokes(5);
-
         jokeManager.printJokes(jokes);
 
         JokeSerializer xmlDomSerializer = new XmlDomJokeSerializer();

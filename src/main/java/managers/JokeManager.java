@@ -8,5 +8,6 @@ import java.util.List;
 public interface JokeManager {
     public List<Joke> fetchJokes(int count) throws IOException;
 
+
     public void printJokes(List<Joke> jokes);
 }
