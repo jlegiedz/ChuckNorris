@@ -1,5 +1,5 @@
 import javaModel.Joke;
-import myApp.serializers.XStreamXmlSerializer;
+import serializers.XStreamXmlSerializer;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

@@ -1,4 +1,3 @@
-
 import javaModel.Joke;
 import managers.JokeManager;
 import managers.RetrofitJokeManager;
@@ -34,5 +33,3 @@ public class Main {
 
 
 }
-
-

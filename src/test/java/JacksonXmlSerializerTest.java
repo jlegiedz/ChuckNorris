@@ -1,5 +1,5 @@
 import javaModel.Joke;
-import myApp.serializers.JacksonXmlSerializer;
+import serializers.JacksonXmlSerializer;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

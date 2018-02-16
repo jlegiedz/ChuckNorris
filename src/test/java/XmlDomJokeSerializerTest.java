@@ -1,4 +1,4 @@
-import myApp.serializers.XmlDomJokeSerializer;
+import serializers.XmlDomJokeSerializer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,13 +22,6 @@ public class XmlDomJokeSerializerTest {
         File file = new File("DOM_file.xml");
         file.delete();
     }
-
-//    @Test
-//    public void doesDOMserilizerCreateAFile() throws IOException {
-//        DOMserializer.serialize(new ArrayList<Joke>());
-//        Assert.assertTrue(file.exists());
-//
-//    }
 
     @Test
     public void serialize() throws Exception {
