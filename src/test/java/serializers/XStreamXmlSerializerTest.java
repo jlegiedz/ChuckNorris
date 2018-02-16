@@ -33,6 +33,7 @@ public class XStreamXmlSerializerTest {
     }
 
 
+
     @Test
     public void checkXmlXstreamLength() {
         Joke joke = new Joke(1, "");

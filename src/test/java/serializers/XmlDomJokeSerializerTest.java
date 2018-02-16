@@ -17,6 +17,7 @@ public class XmlDomJokeSerializerTest {
 
     }
 
+
     @After
     public void after() {
         File file = new File("DOM_file.xml");

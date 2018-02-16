@@ -25,6 +25,7 @@ public class JacksonXmlSerializerTest {
 
     }
 
+
     @After
     public void after() {
         File file = new File("jackson_file.xml");
