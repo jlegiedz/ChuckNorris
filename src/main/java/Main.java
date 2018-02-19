@@ -1,4 +1,5 @@
 import javaModel.Joke;
+import javaModel.MenuElements;
 import managers.JokeManager;
 import managers.RetrofitJokeManager;
 import serializers.JacksonXmlSerializer;
@@ -27,6 +28,7 @@ public class Main {
 
         XStreamXmlSerializer xSteramSerializer = new XStreamXmlSerializer();
         xSteramSerializer.serialize(jokes);
+
 
 
     }

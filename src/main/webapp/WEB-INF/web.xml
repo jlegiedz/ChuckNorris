@@ -1,32 +1,23 @@
-<?xml version = "1.0" encoding="UTF-8"?>
-
-<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app version="3.0"
+         xmlns="http://java.sun.com/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-        http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5">
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
-
-    <display-name>servlets</display-name>
-    <session-config>
-        <session-timeout>120</session-timeout>
-    </session-config>
-    <!--drugi sposb na uzycie servletu- zamiast adnotacji-->
     <servlet>
         <servlet-name>WelcomeServlet</servlet-name>
         <!-- klasa servletu-->
         <servlet-class>servlets.WelcomeServlet</servlet-class>
-        <init-param>
-            <param-name>LOG-REQUEST</param-name>
-            <param-value>true</param-value>
-        </init-param>
+        <!--<init-param>-->
+            <!--<param-name>LOG-REQUEST</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
     </servlet>
     <servlet-mapping>
         <servlet-name>WelcomeServlet</servlet-name>
         <!--nie bedzie sie klocic z tym co mamy w klasie w adnotacji
          - jeden servlet moze oblusgiwac wiele urlow-->
-        <url-pattern>jokes</url-pattern>
+        <url-pattern>/jokes</url-pattern>
     </servlet-mapping>
 
     <!--<filter>-->
