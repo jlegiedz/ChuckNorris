@@ -1,4 +1,4 @@
-<%--
+<%@ page import="javaModel.MenuElements" %><%--
   Created by IntelliJ IDEA.
   User: asia
   Date: 19/02/18
@@ -13,11 +13,11 @@
 <body>
 <ul>
 
+    <c:set var="enumValue" value="<%=MenuElements.values()%>"/>
 
-    <c:forEach items="${MenuElements.values()}" var="enumValue">
-        <a href="${enumValue.getUrl()}"> <li> ${enumValue.getElementName()}</li></a>
+    <c:forEach items="${enumValue}" var="value">
+        <a href="${value.getUrl()}"> <li> ${value.getElementName()}</li></a>
     </c:forEach>
-
 
 </ul>
 

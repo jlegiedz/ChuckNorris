@@ -11,8 +11,12 @@
     <title>Chuck Norris Page</title>
   </head>
   <body>
+  <header>
+  <img src="/content/images/main.jpg", style="width: 100%"; height="47%" align="center"/>
 
-  <div style="float:left; width:20%">
+
+  </header>
+  <div style="float:right; width:20%">
     <%--dyrektywa--%>
     <%@include file="header.jsp"%>
   </div>
@@ -22,8 +26,8 @@
     <%@include file="menu.jsp"%>
   </div>
 
-  <div>
-  <img src="https://eightiesmovies.files.wordpress.com/2010/11/norris4.jpg"/>
+  <div style="width: 90%">
+
   <h2> To get the jokes you have to log in. </h2>
   </div>
   </body>
